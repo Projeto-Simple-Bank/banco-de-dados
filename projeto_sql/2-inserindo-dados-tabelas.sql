@@ -26,31 +26,28 @@ INSERT INTO TB_CONTA (ID_USUARIO, TIPO_CONTA, AGENCIA, SALDO, CONTA, SENHA) VALU
 INSERT INTO TB_PIX (ID, ID_CONTA, CHAVE_PIX, DESCRICAO) VALUES
 (1, 1, 'joao@gmail.com', 'Pagamento de aluguel'),
 (2, 2, '11977501234', 'Transferência para Soraya'),
--- (3, 3, 'studio_bellas@gmail.com', 'Pagamento Manicure'),
--- (4, 4, '88319298000148', 'Pagamento de mercado'),
--- (5, 5, 'carlos@outlook.com', 'Reserva de hotel');
+(3, 3, 'studio_bellas@gmail.com', 'Pagamento Manicure'),
+(4, 4, '88319298000148', 'Pagamento de mercado'),
+(5, 5, 'carlos@outlook.com', 'Reserva de hotel');
 
--- AVISO -> A TB_BOLETO E TB_TED NAO VAI FUNCIONAR SE A TABELA DE TRANSACAO NAO 
--- FOR CRIADA ANTES, PORTANTO NAO PRECISA INSERIR OS VALORES DESSAS TABELAS.
--- VOU TER QUE CONFIRMAR A RELACAO DAS TABELAS COM PROFESSOR, PORQUE UM 
--- BOLETO OU TED NAO DEPENDE DO EXTRATO BANCÁRIO PARA EXISTIR E SIM O EXTRATO
--- DEPENDE DO PAGAMENTO DE BOLETO OU TED PARA EXISTIR.
+-- NÃO PRECISA CRIAR A TABELA BOLETO E TED PARA MOSTRAR AO PROFESSOR
+-- MAS SE QUISER TESTAR, ZERO PROBLEMAS.
 
 -- INSERINDO/CADASTRANDO DADOS NA TABELA TB_BOLETO
--- INSERT INTO TB_BOLETO (ID, ID_TRANSACAO, CODIGO_DE_BARRAS, BENEFICIARIO) VALUES
--- (1, 1, 123456789012, 'Vivo/SA'),
--- (2, 2, 987654321098, 'Universidade Paulista UNIP'),
--- (3, 3, 112233445566, 'Borracharia do Alemao - ME'),
--- (4, 4, 556677889900, 'Raimundo e Francisco Comercio de Bebidas Ltda'),
--- (5, 5, 998877665544, 'Enel Brasil/SA');
+INSERT INTO TB_BOLETO (ID, ID_TRANSACAO, CODIGO_DE_BARRAS, BENEFICIARIO) VALUES
+(1, 1, 123456789012, 'Vivo/SA'),
+(2, 2, 987654321098, 'Universidade Paulista UNIP'),
+(3, 3, 112233445566, 'Borracharia do Alemao - ME'),
+(4, 4, 556677889900, 'Raimundo e Francisco Comercio de Bebidas Ltda'),
+(5, 5, 998877665544, 'Enel Brasil/SA');
 
 -- INSERINDO/CADASTRANDO DADOS NA TABELA TB_TED
--- INSERT INTO TB_TED (ID, ID_TRANSACAO, TARIFA, DESCRICAO) VALUES
--- (1, 1, 8.00, 'Transferência para outra conta'),
--- (2, 2, 8.00, 'Pagamento de fornecedor'),
--- (3, 3, 8.00, 'Depósito em outra agência'),
--- (4, 4, 8.00, 'Pagamento de fatura'),
--- (5, 5, 8.00, 'Doação para ONG');
+INSERT INTO TB_TED (ID, ID_TRANSACAO, TARIFA, DESCRICAO) VALUES
+(1, 1, 8.00, 'Transferência para outra conta'),
+(2, 2, 8.00, 'Pagamento de fornecedor'),
+(3, 3, 8.00, 'Depósito em outra agência'),
+(4, 4, 8.00, 'Pagamento de fatura'),
+(5, 5, 8.00, 'Doação para ONG');
 
 
 
