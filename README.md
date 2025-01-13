@@ -2,7 +2,6 @@
 ![image](https://github.com/user-attachments/assets/e6d47dec-e82f-40fe-a2f0-76d7db3e0c81)
 
 # Documentação do Banco de dados
-
 A seguir, uma descrição detalhada do que cada campo de cada tabela representa no banco de dados bancário:
 
 1. Tabela: TB_USUARIO
@@ -26,6 +25,7 @@ Armazena os dados pessoais dos usuários do sistema bancário.
 - NUMERO INT Número da residência do usuário.
 - CIDADE VARCHAR Cidade que o usuário reside.
 - ESTADO VARCHAR Estado que o usuário reside.
+  
 
 2. Tabela: TB_ADMIN
 Armazena os dados de login e senha dos administradores do sistema.
@@ -37,6 +37,7 @@ Coluna
 - ID PRIMARY KEY IDENTITY Identificador da tabela admin.
 - ID_USUARIO INT Referência ao ID do usuário na tabela TB_USUARIO. Cada administrador é um usuário e pode criar um usuário cliente.
 - SENHA VARCHAR Senha de acesso para o login do administrador no sistema.
+
 
 3. Tabela: TB_CONTA
 Armazena informações sobre a conta bancária do usuário cliente.
@@ -56,7 +57,8 @@ Coluna
 - CONTA INT Número da conta bancária associada ao usuário.
 - SENHA VARCHAR Senha de acesso para logar a conta bancária.
 
-5. Tabela: TB_PIX
+
+4. Tabela: TB_PIX
 Armazena as chaves PIX associadas às contas bancárias dos usuários.
 
 **Funções:** Enviar e receber.
@@ -68,6 +70,7 @@ Coluna
 - ID_CONTA INT Referência ao ID da tabela conta.
 - CHAVE_PIX VARCHAR Chave PIX utilizada para realizar transferências, como e-mail, CPF ou celular.
 - DESCRICAO VARCHAR Descrição opcional que detalha o propósito ou finalidade da transação, como "Pagamento de aluguel" ou "Transferência para Soraya".
+
 
 5. Tabela: TB_BOLETO
 Armazena os boletos gerados no sistema bancário.
@@ -82,6 +85,7 @@ Coluna
 - CODIGO_DE_BARRAS VARCHAR Código de barras gerado para o boleto, utilizado para pagamento.
 - BENEFICIARIO VARCHAR Nome do beneficiário do boleto, ou seja, quem irá receber o pagamento.
 
+
 6. Tabela: TB_TED
 Armazena as transferências realizadas via TED (Transferência Eletrônica Disponível).
 
@@ -94,6 +98,7 @@ Coluna
 - ID_CONTA INT Referência ao ID da tabela conta.
 - TARIFA DECIMAL Valor da tarifa cobrada para a realização da transferência via TED.
 - DESCRICAO VARCHAR Descrição do propósito do TED, como "Pagamento de fornecedor" ou "Doação para ONG".
+
 
 ## Resumo das Relações
 - TB_USUARIO e TB_ADMIN: Cada administrador é associado a um usuário, seja para cadastrar um usuário cliente ou se cadastrar (referência pelo campo ID_USUARIO).
