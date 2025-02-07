@@ -1,5 +1,6 @@
 # Banco de dados
-![image](https://github.com/user-attachments/assets/e6d47dec-e82f-40fe-a2f0-76d7db3e0c81)
+![image](https://github.com/user-attachments/assets/fca61043-78a1-49ed-aa6d-e3905d5862b0)
+
 
 # Documentação do Banco de dados
 A seguir, uma descrição detalhada do que cada campo de cada tabela representa no banco de dados bancário:
